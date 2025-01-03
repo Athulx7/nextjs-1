@@ -4,7 +4,7 @@ import { mongoConnet } from "../../../config/mongoConnect";
 
 import { product } from "../../models/productModels";
 
-export async function GET(req,res) {
+export async function GET() {
     await mongoConnet()
 
     const products = await product.find()
